@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lebid – Дитячий магазин</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #f8cdda, #cceeff);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #555;
+    }
+    nav {
+      background-color: #fceef5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #888;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #ffe9f1;
+    }
+    main {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .product {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      background-color: #fdf9fb;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      font-size: 1.1em;
+      color: #444;
+    }
+    .product p {
+      color: #777;
+      font-size: 0.95em;
+    }
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .buy-button {
+      background-color: #ffc6e2;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f9f9f9;
+      color: #888;
+      font-size: 0.9em;
+    }
+    form {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lebid</h1>
+    <p>Ніжний магазин дитячих товарів</p>
+  </header>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="about.html">Про нас</a>
+    <a href="delivery.html">Доставка</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+  <main>
+    <div class="product">
+      <img src="https://via.placeholder.com/220x180.png?text=Плед+Міккі+Маус" alt="Плед Міккі Маус">
+      <h3>Плед дитячий рожевий "Міккі Маус"</h3>
+      <p>М’який, теплий, 100% бавовна</p>
+      <div class="price">450 грн</div>
+      <form action="https://www.liqpay.ua/api/3/checkout" method="POST">
+        <input type="hidden" name="data" value="[Ваш_зашифрований_data]">
+        <input type="hidden" name="signature" value="[Ваш_підпис]">
+        <button class="buy-button" type="submit">Купити</button>
+      </form>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/220x180.png?text=Гризунець+лебідь" alt="Гризунець Лебідь">
+      <h3>Гризунець дитячий "Лебідь"</h3>
+      <p>Безпечний, дерев’яний, екологічний</p>
+      <div class="price">180 грн</div>
+      <form action="https://www.liqpay.ua/api/3/checkout" method="POST">
+        <input type="hidden" name="data" value="[Ваш_зашифрований_data]">
+        <input type="hidden" name="signature" value="[Ваш_підпис]">
+        <button class="buy-button" type="submit">Купити</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    © 2025 Lebid. Всі права захищені.
+  </footer>
+</body>
+</html>
